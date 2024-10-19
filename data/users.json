@@ -2,23 +2,23 @@
     "users": [
         {
             "id": 0,
-            "username": "VotreNom",  
-            "avatar": "/img/profiles/default.jpg", 
+            "username": "Moi",  
+            "avatar": "/img/profiles/default.jpg"
         },
         {
             "id": 1,
             "username": "Dwayne Johnson",
-            "avatar": "/img/profiles/dwayne.jpg", 
+            "avatar": "/img/profiles/dwayne.jpg" 
         },
         {
             "id": 2,
             "username": "Marie Dupont",
-            "avatar": "/img/profiles/marie.jpg",  
+            "avatar": "/img/profiles/marie.jpg"  
         },
         {
             "id": 3,
             "username": "Théo Lamber",
-            "avatar": "/img/profiles/theo.jpg",
+            "avatar": "/img/profiles/theo.jpg"
         }
     ]
 }
