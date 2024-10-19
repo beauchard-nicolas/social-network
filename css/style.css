@@ -6,7 +6,7 @@
 	--background: hsl(240, 3.7%, 15.88%);
 	--foreground: hsl(229, 23%, 99%);
 	--muted: hsl(240, 5.88%, 10%);
-	--muted-foreground: hsl(229, 10%, 63%);
+	--muted-foreground: hsl(0, 0%, 97%);
 	--popover: hsl(240, 5.88%, 10%);
 	--popover-foreground: hsl(0, 0%, 100%);
 	--card: hsl(240, 5.88%, 10%);
@@ -26,25 +26,27 @@
 
 html,
 body {
-	height: 100%;
-	margin: 0;
+	height: 100%; /* Assurez-vous que le body prend toute la hauteur de la fenêtre */
+	margin: 0; /* Supprimez les marges par défaut */
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+	display: flex; /* Utilisez Flexbox */
+	flex-direction: column; /* Alignez les éléments en colonne */
 	font-family: "Roboto", sans-serif;
 	background: white;
 	color: black;
-	padding-top: 4rem;
+	padding: 0; /* Assurez-vous qu'il n'y a pas de padding */
+}
+
+* {
+	box-sizing: border-box;
 }
 
 #container {
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 70px;
-	margin-bottom: 20px;
-	padding: 1em;
+	flex: 1; /* Permet au conteneur principal de prendre tout l'espace disponible */
+	margin-top: 5em;
+	padding: 2em 0px;
 	background-color: var(--secondary);
 	border-radius: 0.5em;
 }

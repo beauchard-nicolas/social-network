@@ -1,15 +1,19 @@
 footer {
 	background: var(--card);
-	border-radius: var(--radius);
 	box-shadow: 8px 8px 15px rgba(var(--muted), 0.2),
 		-8px -8px 15px rgba(var(--popover), 0.5);
 	padding: 1rem;
 	text-align: center;
 	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
 	bottom: 0;
 	z-index: 1000;
 	font-family: "Fira Code", monospace;
+
+	box-sizing: border-box;
 }
 
 footer p {
