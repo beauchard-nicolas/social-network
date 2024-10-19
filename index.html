@@ -4,17 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Mini-Réseau Social</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Code:wght@400&display=swap"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- Header & Footer-->
+		<link rel="stylesheet" href="css/layouts/header.css" />
+		<link rel="stylesheet" href="css/layouts/footer.css" />
+
+		<!-- Components -->
+		<link rel="stylesheet" href="css/components/feed.css" />
+		<link rel="stylesheet" href="css/components/friends.css" />
+		<link rel="stylesheet" href="css/components/messaging.css" />
 	</head>
 	<body>
 		<header>
+			<h1>social newtork.</h1>
 			<nav>
-				<ul>
-					<li><a href="templates/feed.html">Fil d'actualité</a></li>
-					<li><a href="templates/messaging.html">Messagerie</a></li>
-					<li><a href="templates/friends.html">Amis</a></li>
-				</ul>
+				<a href="#" data-page="feed">Fil d'actualité</a>
+				<a href="#" data-page="messaging">Messagerie</a>
+				<a href="#" data-page="friends">Amis</a>
 			</nav>
 		</header>
+
+		<main id="container">
+			<!-- Conteneur principal -->
+		</main>
+
+		<footer>
+			<p>&copy; 2024 social network. Tous droits réservés.</p>
+		</footer>
+
+		<!-- main.js -->
+		<script src="js/main.js" type="module"></script>
 	</body>
 </html>

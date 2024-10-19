@@ -1,0 +1,50 @@
+/*
+  Theme de couleur "Bluesis" importé depuis https://ui.jln.dev/ 
+*/
+
+:root {
+	--background: hsl(240, 3.7%, 15.88%);
+	--foreground: hsl(229, 23%, 99%);
+	--muted: hsl(240, 5.88%, 10%);
+	--muted-foreground: hsl(229, 10%, 63%);
+	--popover: hsl(240, 5.88%, 10%);
+	--popover-foreground: hsl(0, 0%, 100%);
+	--card: hsl(240, 5.88%, 10%);
+	--card-foreground: hsl(0, 0%, 100%);
+	--border: hsl(249.06, 0%, 14.62%);
+	--input: hsl(215, 0%, 23.85%);
+	--primary: hsl(216, 100%, 50%);
+	--primary-foreground: hsl(0, 0%, 100%);
+	--secondary: hsl(0, 0%, 98.04%);
+	--secondary-foreground: hsl(229, 0%, 0%);
+	--accent: hsl(228, 23.26%, 16.86%);
+	--accent-foreground: hsl(229, 23%, 77%);
+	--destructive: hsl(358.16, 68.78%, 53.53%);
+	--destructive-foreground: hsl(0, 0%, 100%);
+	--ring: hsl(216, 0%, 17.69%);
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Roboto", sans-serif;
+	background: white;
+	color: black;
+	padding-top: 4rem;
+}
+
+#container {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 70px;
+	margin-bottom: 20px;
+	padding: 1em;
+	background-color: var(--secondary);
+	border-radius: 0.5em;
+}
