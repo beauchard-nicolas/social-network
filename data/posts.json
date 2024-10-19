@@ -1,0 +1,214 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Marie Dupont",
+      "authorAvatar": "/img/profiles/cat.jpg",
+      "content": "Journée incroyable à la plage ! Le soleil, le sable, et une vue à couper le souffle. #Vacances",
+      "image": "/img/posts/1.jpeg",
+      "createdAt": "2024-04-15T12:00:00Z",   
+      "reactions": {
+        "likes": 42,
+        "loves": 17,
+        "dislikes": 3   
+      },
+      "comments": [
+        {
+          "author": "Pierre Martin",
+          "content": "Ça a l'air magnifique ! Profite bien !",
+          "createdAt": "2024-04-15T12:30:00Z"   
+        },
+        {
+          "author": "Sophie Lefebvre",
+          "content": "J'adore cette plage ! Où est-ce exactement ?",
+          "createdAt": "2024-04-15T12:45:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": "Dwayne Johnson",
+      "authorAvatar": "/img/profiles/rock.jpg",
+      "content": "Nouveau projet en cours ! Hâte de vous montrer le résultat final. #CodeLife",
+      "image": null,
+      "createdAt": "2024-04-16T09:00:00Z",   
+      "reactions": {
+        "likes": 28,
+        "loves": 5,
+        "dislikes": 1   
+      },
+      "comments": [
+        {
+          "author": "Emma Rousseau",
+          "content": "J'ai hâte de voir ça !",
+          "createdAt": "2024-04-16T09:15:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "author": "Théo Lambert",
+      "authorAvatar": "/img/profiles/thug.jpg",
+      "content": "Concert incroyable hier soir ! L'ambiance était électrique. #LiveMusic",
+      "image": "/img/posts/2.jpg",
+      "createdAt": "2024-04-17T20:00:00Z",   
+      "reactions": {
+        "likes": 76,
+        "loves": 34,
+        "dislikes": 0   
+      },
+      "comments": [
+        {
+          "author": "Thomas Bernard",
+          "content": "J'y étais aussi ! C'était vraiment génial !",
+          "createdAt": "2024-04-17T20:30:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "author": "Marie Dupont",
+      "authorAvatar": "/img/profiles/cat.jpg",
+      "content": "Nouvelle recette testée aujourd'hui : Risotto aux champignons. Un délice ! #Cooking",
+      "image": "/img/posts/3.jpeg",
+      "createdAt": "2024-04-18T14:00:00Z",   
+      "reactions": {
+        "likes": 51,
+        "loves": 23,
+        "dislikes": 2   
+      },
+      "comments": [
+        {
+          "author": "Julie Mercier",
+          "content": "Ça a l'air délicieux ! Tu partages la recette ?",
+          "createdAt": "2024-04-18T14:15:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "author": "Dwayne Johnson",
+      "authorAvatar": "/img/profiles/rock.jpg",
+      "content": "Première journée dans mon nouveau job ! Équipe super sympa et projets passionnants. #NewBeginnings",
+      "image": null,
+      "createdAt": "2024-04-19T08:00:00Z",   
+      "reactions": {
+        "likes": 89,
+        "loves": 41,
+        "dislikes": 0   
+      },
+      "comments": [
+        {
+          "author": "Hugo Roux",
+          "content": "Félicitations Léa ! Je suis sûr que tu vas cartonner !",
+          "createdAt": "2024-04-19T08:30:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "author": "Théo Lambert",
+      "authorAvatar": "/img/profiles/thug.jpg",
+      "content": "Randonnée spectaculaire aujourd'hui. La vue en haut valait vraiment le coup ! #Nature",
+      "image": "/img/posts/4.jpeg",
+      "createdAt": "2024-04-20T10:00:00Z",   
+      "reactions": {
+        "likes": 63,
+        "loves": 29,
+        "dislikes": 1   
+      },
+      "comments": [
+        {
+          "author": "Sarah Durand",
+          "content": "Wow ! Quel paysage incroyable !",
+          "createdAt": "2024-04-20T10:15:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "author": "Marie Dupont",
+      "authorAvatar": "/img/profiles/cat.jpg",
+      "content": "Nouvelle coupe de cheveux ! Qu'en pensez-vous ? #NewLook",
+      "image": "/img/posts/5.jpg",
+      "createdAt": "2024-04-21T11:00:00Z",   
+      "reactions": {
+        "likes": 112,
+        "loves": 58,
+        "dislikes": 0   
+      },
+      "comments": [
+        {
+          "author": "Julien Dupuis",
+          "content": "Ça te va super bien Camille !",
+          "createdAt": "2024-04-21T11:15:00Z"   
+        },
+        {
+          "author": "Manon Laurent",
+          "content": "J'adore ! Ça change vraiment !",
+          "createdAt": "2024-04-21T11:30:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "author": "Dwayne Johnson",
+      "authorAvatar": "/img/profiles/rock.jpg",
+      "content": "Je viens de finir de lire ce livre incroyable. Je vous le recommande vivement ! #Lecture",
+      "image": "/img/posts/6.jpg",
+      "createdAt": "2024-04-22T09:00:00Z",   
+      "reactions": {
+        "likes": 37,
+        "loves": 12,
+        "dislikes": 0   
+      },
+      "comments": [
+        {
+          "author": "Alice Lemoine",
+          "content": "Oh, j'ai entendu parler de ce livre ! Il est si bien que ça ?",
+          "createdAt": "2024-04-22T09:15:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "author": "Théo Lambert",
+      "authorAvatar": "/img/profiles/thug.jpg",
+      "content": "Journée productive au bureau. Parfois, une bonne séance de brainstorming fait toute la différence ! #WorkLife",
+      "image": null,
+      "createdAt": "2024-04-23T14:00:00Z",   
+      "reactions": {
+        "likes": 45,
+        "loves": 8,
+        "dislikes": 2   
+      },
+      "comments": [
+        {
+          "author": "Nicolas Germain",
+          "content": "Totalement d'accord ! Rien de tel qu'une bonne collaboration d'équipe.",
+          "createdAt": "2024-04-23T14:15:00Z"   
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "author": "Marie Dupont",
+      "authorAvatar": "/img/profiles/cat.jpg",
+      "content": "Mon petit coin de paradis. Rien de tel qu'un bon café en terrasse pour bien commencer la journée ! #MorningRitual",
+      "image": "/img/posts/7.jpg",
+      "createdAt": "2024-04-24T08:00:00Z",   
+      "reactions": {
+        "likes": 82,
+        "loves": 37,
+        "dislikes": 1   
+      },
+      "comments": [
+        {
+          "author": "Élodie Renard",
+          "content": "Ça donne envie ! Profite bien de ce moment !",
+          "createdAt": "2024-04-24T08:15:00Z"   
+        }
+      ]
+    }
+  ]
+}
