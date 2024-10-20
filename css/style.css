@@ -15,8 +15,10 @@
 	--input: hsl(215, 0%, 23.85%);
 	--primary: hsl(216, 100%, 50%);
 	--primary-foreground: hsl(0, 0%, 100%);
-	--secondary: hsl(0, 0%, 98.04%);
+	--primary-dark: hsl(216, 100%, 42%);
+	--secondary: hsl(163, 100%, 31%);
 	--secondary-foreground: hsl(229, 0%, 0%);
+	--secondary-dark: hsl(163, 100%, 25%);
 	--accent: hsl(228, 23.26%, 16.86%);
 	--accent-foreground: hsl(229, 23%, 77%);
 	--destructive: hsl(358.16, 68.78%, 53.53%);
@@ -47,6 +49,6 @@ body {
 	flex: 1; /* Permet au conteneur principal de prendre tout l'espace disponible */
 	margin-top: 5em;
 	padding: 2em 0px;
-	background-color: var(--secondary);
+	background-color: var(--muted-foreground);
 	border-radius: 0.5em;
 }
