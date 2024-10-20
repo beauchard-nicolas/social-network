@@ -20,7 +20,7 @@ export async function initMessaging(params = {}) {
 // Fonction pour charger les conversations depuis le fichier JSON
 async function loadConversations() {
   try {
-    const response = await fetch('/data/messages.json');
+    const response = await fetch('./data/messages.json');
     const data = await response.json();
     conversations = data.conversations;
     displayConversationsList();
@@ -79,7 +79,7 @@ function createMessageElement(message, friendName, friendAvatar) {
   const element = document.createElement('div');
   element.className = `message ${message.senderId === 0 ? 'sent' : 'received'}`;
   element.innerHTML = `
-    <img src="${message.senderId === 0 ? '/img/profiles/default.jpg' : friendAvatar}" alt="${message.senderId === 0 ? 'Moi' : friendName}" class="message-avatar">
+    <img src="${message.senderId === 0 ? './img/profiles/default.jpg' : friendAvatar}" alt="${message.senderId === 0 ? 'Moi' : friendName}" class="message-avatar">
     <div class="message-content">
       <p>${message.content}</p>
       <span>${formatDate(message.timestamp)}</span>

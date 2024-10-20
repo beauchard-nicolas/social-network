@@ -13,20 +13,16 @@ export function initFeed() {
 // Charge les posts depuis le fichier JSON
 async function loadPosts() {
   try {
-    const response = await fetch('/data/posts.json');
-    const data = await response.json();
-    
-    // Extraction du tableau de posts
-    currentPosts = data.posts || [];
-    
-    if (currentPosts.length === 0) {
-      displayError('Aucun post à afficher.');
-    } else {
-      displayPosts(currentPosts);
+    const response = await fetch('./data/posts.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    const data = await response.json();
+    currentPosts = data.posts;
+    displayPosts(currentPosts);
   } catch (error) {
     console.error('Erreur lors du chargement des posts:', error);
-    displayError('Impossible de charger les posts. Veuillez réessayer plus tard.');
+    displayError("Impossible de charger les posts. Veuillez réessayer plus tard.");
   }
 }
 
@@ -151,7 +147,7 @@ function setupPostCreation() {
       const newPost = {
         id: Date.now(), // Utilise le timestamp comme ID unique
         author: 'Moi',
-        authorAvatar: '/img/profiles/default.jpg',
+        authorAvatar: './img/profiles/default.jpg',
         content: content,
         createdAt: new Date().toISOString(),
         reactions: {
@@ -282,3 +278,4 @@ function openImageModal(imageSrc, postId) {
 
 // Rendre la fonction openImageModal globale pour qu'elle soit accessible depuis l'attribut onclick
 window.openImageModal = openImageModal;
+
