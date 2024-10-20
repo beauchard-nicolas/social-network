@@ -33,6 +33,12 @@ async function loadPage(page) {
     
     // Insertion du HTML et initialisation de la page
     container.innerHTML = html;
+    
+    // Chargez le CSS spécifique à la page si nécessaire
+    if (page === 'friends') {
+      loadCSS('/css/components/friends.css');
+    }
+    
     routes[page].init();
     currentPage = page;
   } catch (error) {
@@ -56,3 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Ajoutez cette fonction pour charger dynamiquement le CSS
+function loadCSS(filename) {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = filename;
+  document.head.appendChild(link);
+}

@@ -1,8 +1,18 @@
-// friend.js
+// friends.js
+
+// Fonction principale pour initialiser la page des amis
 export function initFriends() {
-  loadFriendsList();
+  setupMessageButtons();
 }
 
-function loadFriendsList() {
-  // Logique pour charger et afficher la liste d'amis
+// Configure les boutons de message pour chaque ami
+function setupMessageButtons() {
+  const messageButtons = document.querySelectorAll('.message-btn');
+  messageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const friendId = button.getAttribute('data-friend-id');
+      // Redirection vers la messagerie avec l'ID de l'ami
+      window.location.href = `/messaging?friendId=${friendId}`;
+    });
+  });
 }
