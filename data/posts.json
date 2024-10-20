@@ -3,9 +3,9 @@
     {
       "id": 1,
       "author": "Marie Dupont",
-      "authorAvatar": "/img/profiles/cat.jpg",
+      "authorAvatar": "./img/profiles/cat.jpg",
       "content": "Journée incroyable à la plage ! Le soleil, le sable, et une vue à couper le souffle. #Vacances",
-      "image": "/img/posts/1.jpg",
+      "image": "./img/posts/1.jpg",
       "createdAt": "2024-04-15T12:00:00Z",   
       "reactions": {
         "likes": 42,

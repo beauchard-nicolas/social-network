@@ -4,7 +4,7 @@
       "id": 1,
       "friendId": 1,
       "friendName": "Alice Dupont",
-      "friendAvatar": "/img/profiles/friend1.jpg",
+      "friendAvatar": "./img/profiles/friend1.jpg",
       "lastMessage": {
         "content": "D'accord, à demain alors !",
         "timestamp": "2023-05-10T14:40:00Z"
@@ -40,7 +40,7 @@
       "id": 2,
       "friendId": 2,
       "friendName": "Bob Martin",
-      "friendAvatar": "/img/profiles/friend2.jpg",
+      "friendAvatar": "./img/profiles/friend2.jpg",
       "lastMessage": {
         "content": "On se voit demain ?",
         "timestamp": "2023-05-09T18:45:00Z"

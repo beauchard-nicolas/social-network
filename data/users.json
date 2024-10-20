@@ -3,37 +3,37 @@
         {
             "id": 0,
             "username": "Moi",  
-            "avatar": "/img/profiles/default.jpg"
+            "avatar": "./img/profiles/default.jpg"
         },
         {
             "id": 1,
             "username": "Alice Dupont",
-            "avatar": "/img/profiles/friend1.jpg"
+            "avatar": "./img/profiles/friend1.jpg"
         },
         {
             "id": 2,
             "username": "Bob Martin",
-            "avatar": "/img/profiles/friend2.jpg"
+            "avatar": "./img/profiles/friend2.jpg"
         },
         {
             "id": 3,
             "username": "Claire Dubois",
-            "avatar": "/img/profiles/friend3.jpg"
+            "avatar": "./img/profiles/friend3.jpg"
         },
         {
             "id": 4,
             "username": "Dwayne Johnson",
-            "avatar": "/img/profiles/rock.jpg"
+            "avatar": "./img/profiles/rock.jpg"
         },
         {
             "id": 5,
             "username": "Marie Dupont",
-            "avatar": "/img/profiles/cat.jpg"
+            "avatar": "./img/profiles/cat.jpg"
         },
         {
             "id": 6,
             "username": "Théo Lambert",
-            "avatar": "/img/profiles/thug.jpg"
+            "avatar": "./img/profiles/thug.jpg"
         }
     ]
 }
