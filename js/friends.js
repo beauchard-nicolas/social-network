@@ -1,6 +1,6 @@
 // friends.js
 
-// Fonction principale pour initialiser la page des amis
+// Fonction d'initialisation du module des amis
 export function initFriends() {
   setupMessageButtons();
   setupFriendsFilter();
@@ -12,10 +12,13 @@ export function initFriends() {
 function setupMessageButtons() {
   const messageButtons = document.querySelectorAll('.message-btn');
   messageButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const friendId = button.getAttribute('data-friend-id');
-      // Redirection vers la messagerie avec l'ID de l'ami
-      window.location.href = `/messaging?friendId=${friendId}`;
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const friendId = parseInt(button.getAttribute('data-friend-id'));
+      const event = new CustomEvent('navigate', {
+        detail: { page: 'messaging', friendId: friendId }
+      });
+      document.dispatchEvent(event);
     });
   });
 }

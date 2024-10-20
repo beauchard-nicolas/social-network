@@ -1,0 +1,138 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "friendId": 1,
+      "friendName": "Alice Dupont",
+      "friendAvatar": "/img/profiles/friend1.jpg",
+      "lastMessage": {
+        "content": "D'accord, à demain alors !",
+        "timestamp": "2023-05-10T14:40:00Z"
+      },
+      "messages": [
+        {
+          "id": 1,
+          "senderId": 1,
+          "content": "Salut, comment ça va ?",
+          "timestamp": "2023-05-10T14:30:00Z"
+        },
+        {
+          "id": 2,
+          "senderId": 0,
+          "content": "Salut Alice ! Ça va bien, merci. Et toi ?",
+          "timestamp": "2023-05-10T14:35:00Z"
+        },
+        {
+          "id": 3,
+          "senderId": 1,
+          "content": "Très bien aussi ! On se voit demain pour le déjeuner ?",
+          "timestamp": "2023-05-10T14:38:00Z"
+        },
+        {
+          "id": 4,
+          "senderId": 0,
+          "content": "D'accord, à demain alors !",
+          "timestamp": "2023-05-10T14:40:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "friendId": 2,
+      "friendName": "Bob Martin",
+      "friendAvatar": "/img/profiles/friend2.jpg",
+      "lastMessage": {
+        "content": "On se voit demain ?",
+        "timestamp": "2023-05-09T18:45:00Z"
+      },
+      "messages": [
+        {
+          "id": 1,
+          "senderId": 2,
+          "content": "On se voit demain ?",
+          "timestamp": "2023-05-09T18:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "friendId": 3,
+      "friendName": "Claire Dubois",
+      "friendAvatar": "/img/profiles/friend3.jpg",
+      "lastMessage": null,
+      "messages": []
+    },
+    {
+      "id": 4,
+      "friendId": 4,
+      "friendName": "Dwayne Johnson",
+      "friendAvatar": "/img/profiles/rock.jpg",
+      "lastMessage": {
+        "content": "Super, on se retrouve là-bas !",
+        "timestamp": "2023-05-11T09:25:00Z"
+      },
+      "messages": [
+        {
+          "id": 1,
+          "senderId": 4,
+          "content": "Tu viens à la salle de gym aujourd'hui ?",
+          "timestamp": "2023-05-11T09:15:00Z"
+        },
+        {
+          "id": 2,
+          "senderId": 0,
+          "content": "Oui, j'y serai vers 18h. Ça te va ?",
+          "timestamp": "2023-05-11T09:20:00Z"
+        },
+        {
+          "id": 3,
+          "senderId": 4,
+          "content": "Parfait ! On se fait une séance de musculation ensemble ?",
+          "timestamp": "2023-05-11T09:22:00Z"
+        },
+        {
+          "id": 4,
+          "senderId": 0,
+          "content": "Super, on se retrouve là-bas !",
+          "timestamp": "2023-05-11T09:25:00Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "friendId": 5,
+      "friendName": "Marie Dupont",
+      "friendAvatar": "/img/profiles/cat.jpg",
+      "lastMessage": {
+        "content": "N'oublie pas le dîner de ce soir !",
+        "timestamp": "2023-05-11T14:20:00Z"
+      },
+      "messages": [
+        {
+          "id": 1,
+          "senderId": 5,
+          "content": "N'oublie pas le dîner de ce soir !",
+          "timestamp": "2023-05-11T14:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "friendId": 6,
+      "friendName": "Théo Lambert",
+      "friendAvatar": "/img/profiles/thug.jpg",
+      "lastMessage": {
+        "content": "Le projet avance bien ?",
+        "timestamp": "2023-05-11T16:45:00Z"
+      },
+      "messages": [
+        {
+          "id": 1,
+          "senderId": 6,
+          "content": "Le projet avance bien ?",
+          "timestamp": "2023-05-11T16:45:00Z"
+        }
+      ]
+    }
+  ]
+}

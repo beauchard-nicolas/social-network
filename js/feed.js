@@ -1,12 +1,14 @@
-// Initialise le flux d'actualités
+// feed.js
+
+// Variable globale pour stocker les posts actuels
+let currentPosts = [];
+
+// Fonction d'initialisation du module de fil d'actualités
 export function initFeed() {
   loadPosts();
   setupPostCreation();
   setupPostInteractions();
 }
-
-// Variable globale pour stocker les posts actuels
-let currentPosts = [];
 
 // Charge les posts depuis le fichier JSON
 async function loadPosts() {
