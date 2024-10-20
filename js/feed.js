@@ -1,6 +1,7 @@
 // Initialise le flux d'actualités
 export function initFeed() {
   loadPosts();
+  setupPostCreation();
   // setupPostInteractions();
 }
 
@@ -43,6 +44,7 @@ function createPostElement(post) {
   const postElement = document.createElement('div');
   postElement.className = 'post';
   
+  // Formatage de la date et de l'heure
   const date = new Date(post.createdAt);
   const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
   const formattedTime = `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
@@ -78,9 +80,69 @@ function createPostElement(post) {
       </form>
   `;
 
+  // Ajout de l'écouteur d'événements pour le formulaire de nouveau commentaire
+  const commentForm = postElement.querySelector('.new-comment-form');
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const commentInput = commentForm.querySelector('input');
+    const commentContent = commentInput.value.trim();
+    if (commentContent) {
+      addCommentToPost(post.id, commentContent);
+      commentInput.value = '';
+    }
+  });
+
   return postElement;
 }
 
+// Fonction pour ajouter un commentaire à un post
+function addCommentToPost(postId, commentContent) {
+  const post = currentPosts.find(p => p.id === postId);
+  if (post) {
+    const newComment = {
+      id: Date.now(), // Utilise le timestamp comme ID unique
+      author: 'Moi',
+      content: commentContent,
+      createdAt: new Date().toISOString()
+    };
+    post.comments.push(newComment);
+    displayPosts(currentPosts);
+  }
+}
+
+// Configure le formulaire de création de nouveau post
+function setupPostCreation() {
+  const form = document.getElementById('new-post-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const content = form.querySelector('textarea').value;
+    
+    if (content.trim()) {
+      const newPost = {
+        id: Date.now(), // Utilise le timestamp comme ID unique
+        author: 'Moi',
+        authorAvatar: '/img/profiles/default.jpg',
+        content: content,
+        createdAt: new Date().toISOString(),
+        reactions: {
+          likes: 0,
+          loves: 0,
+          dislikes: 0
+        },
+        comments: []
+      };
+
+      addNewPost(newPost);
+      form.reset();
+    }
+  });
+}
+
+// Ajoute un nouveau post au début du tableau et rafraîchit l'affichage
+function addNewPost(newPost) {
+  currentPosts.unshift(newPost); 
+  displayPosts(currentPosts);
+}
 
 // Affiche un message d'erreur dans le conteneur
 function displayError(message) {
