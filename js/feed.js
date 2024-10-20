@@ -77,7 +77,7 @@ function createPostElement(post) {
           </div>
       </div>
       <p>${post.content}</p>
-      ${post.image ? `<img src=".${post.image}" alt="Post image" class="post-image" onclick="openImageModal('${post.image}', '${post.id}')">` : ''}
+      ${post.image ? `<img src="${post.image}" alt="Post image" class="post-image" onclick="openImageModal('${post.image}', '${post.id}')">` : ''}
       <div class="post-stats">
           <div class="reaction-btn-container">
             <button class="reaction-btn love" data-reaction="love"><span class="reaction-icon">❤️</span></button>

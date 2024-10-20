@@ -44,6 +44,7 @@ function displayConversationsList() {
 function createConversationElement(conversation) {
   const element = document.createElement('div');
   element.className = 'conversation-item';
+  console.log(conversation.friendAvatar);
   element.innerHTML = `
     <img src="${conversation.friendAvatar}" alt="${conversation.friendName}" class="friend-avatar">
     <div class="conversation-info">
@@ -118,7 +119,7 @@ function sendMessage(content) {
   };
   
   // Mise à jour de l'affichage
-  const messageElement = createMessageElement(newMessage, 'Moi', '/img/profiles/default.jpg');
+  const messageElement = createMessageElement(newMessage, 'Moi', './img/profiles/default.jpg');
   document.getElementById('messages-container').appendChild(messageElement);
   displayConversationsList();
 }

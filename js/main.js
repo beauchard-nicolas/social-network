@@ -37,9 +37,9 @@ async function loadPage(page, params = {}) {
     
     // Chargement du CSS spécifique à la page si nécessaire
     if (page === 'friends') {
-      loadCSS('/css/components/friends.css');
+      loadCSS('./css/components/friends.css');
     } else if (page === 'messaging') {
-      loadCSS('/css/components/messaging.css');
+      loadCSS('./css/components/messaging.css');
     }
     
     // Initialisation de la page avec les paramètres éventuels
