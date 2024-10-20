@@ -28,17 +28,17 @@
 
 html,
 body {
-	height: 100%; /* Assurez-vous que le body prend toute la hauteur de la fenêtre */
-	margin: 0; /* Supprimez les marges par défaut */
+	height: 100%;
+	margin: 0;
 }
 
 body {
-	display: flex; /* Utilisez Flexbox */
-	flex-direction: column; /* Alignez les éléments en colonne */
+	display: flex;
+	flex-direction: column;
 	font-family: "Roboto", sans-serif;
 	background: white;
 	color: black;
-	padding: 0; /* Assurez-vous qu'il n'y a pas de padding */
+	padding: 0;
 }
 
 * {
@@ -46,7 +46,7 @@ body {
 }
 
 #container {
-	flex: 1; /* Permet au conteneur principal de prendre tout l'espace disponible */
+	flex: 1;
 	margin-top: 5em;
 	padding: 2em 0px;
 	background-color: var(--muted-foreground);

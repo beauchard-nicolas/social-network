@@ -1,3 +1,4 @@
+/* Style principal du conteneur du flux d'actualité */
 #feed {
 	max-width: 700px;
 	margin: 0 auto;
@@ -7,12 +8,14 @@
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Conteneur du formulaire de nouveau post */
 #new-post-form-container {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 20px;
 }
 
+/* Style de l'avatar de l'utilisateur dans le formulaire de nouveau post */
 #new-post-form-container img {
 	width: 50px;
 	height: 50px;
@@ -20,6 +23,7 @@
 	margin-right: 10px;
 }
 
+/* Style du formulaire de nouveau post */
 #new-post-form {
 	display: flex;
 	margin: auto;
@@ -29,6 +33,7 @@
 	width: 100%;
 }
 
+/* Style de la zone de texte du formulaire de nouveau post */
 #new-post-form textarea {
 	flex-grow: 1;
 	height: 40px;
@@ -40,6 +45,7 @@
 	font-size: 14px;
 }
 
+/* Style du bouton de publication */
 #new-post-form button {
 	padding: 10px 20px;
 	background-color: var(--secondary);
@@ -52,10 +58,12 @@
 	font-weight: bold;
 }
 
+/* Effet de survol sur le bouton de publication */
 #new-post-form button:hover {
 	background-color: var(--secondary-dark);
 }
 
+/* Style des posts individuels */
 .post {
 	background: white;
 	border-radius: 8px;
@@ -64,12 +72,14 @@
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* En-tête du post (avatar, nom d'auteur, date) */
 .post-header {
 	display: flex;
 	align-items: center;
 	position: relative;
 }
 
+/* Style de la date du post */
 .post-date {
 	position: absolute;
 	top: 20;
@@ -81,6 +91,7 @@
 	color: #666;
 }
 
+/* Style de l'avatar de l'auteur du post */
 .author-avatar {
 	width: 50px;
 	height: 50px;
@@ -88,18 +99,21 @@
 	margin-right: 10px;
 }
 
+/* Style des images dans les posts */
 .post img.post-image {
 	width: 100%;
 	border-radius: 4px;
 	margin: 10px 0;
 }
 
+/* Section des commentaires */
 .post-comments {
 	margin-top: 20px;
 	color: var(--muted);
 	border-radius: 5px;
 }
 
+/* Style individuel des commentaires */
 .comment {
 	margin: 5px 0;
 	background-color: var(--muted-foreground);
@@ -107,6 +121,7 @@
 	padding: 10px;
 }
 
+/* Style de la date des commentaires */
 .comment-date {
 	font-size: 0.8em;
 	color: #666;
@@ -114,16 +129,19 @@
 	margin-top: 5px;
 }
 
+/* Style des messages d'erreur */
 .error {
 	color: var(--destructive);
 	text-align: center;
 }
 
+/* Formulaire pour ajouter un nouveau commentaire */
 .new-comment-form {
 	display: flex;
 	margin-top: 10px;
 }
 
+/* Champ de saisie pour le nouveau commentaire */
 .new-comment-form input {
 	flex-grow: 1;
 	padding: 8px;
@@ -131,6 +149,7 @@
 	border-radius: 4px 0 0 4px;
 }
 
+/* Bouton pour soumettre un nouveau commentaire */
 .new-comment-form button {
 	padding: 8px 16px;
 	background-color: var(--primary);
@@ -141,6 +160,7 @@
 	transition: background-color 0.3s ease;
 }
 
+/* Effet de survol sur le bouton de commentaire */
 .new-comment-form button:hover {
 	background-color: var(--primary-dark);
 }
