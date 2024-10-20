@@ -58,7 +58,7 @@
       "id": 3,
       "friendId": 3,
       "friendName": "Claire Dubois",
-      "friendAvatar": "/img/profiles/friend3.jpg",
+      "friendAvatar": "./img/profiles/friend3.jpg",
       "lastMessage": null,
       "messages": []
     },
@@ -66,7 +66,7 @@
       "id": 4,
       "friendId": 4,
       "friendName": "Dwayne Johnson",
-      "friendAvatar": "/img/profiles/rock.jpg",
+      "friendAvatar": "./img/profiles/rock.jpg",
       "lastMessage": {
         "content": "Super, on se retrouve là-bas !",
         "timestamp": "2023-05-11T09:25:00Z"
@@ -102,7 +102,7 @@
       "id": 5,
       "friendId": 5,
       "friendName": "Marie Dupont",
-      "friendAvatar": "/img/profiles/cat.jpg",
+      "friendAvatar": "./img/profiles/cat.jpg",
       "lastMessage": {
         "content": "N'oublie pas le dîner de ce soir !",
         "timestamp": "2023-05-11T14:20:00Z"
@@ -120,7 +120,7 @@
       "id": 6,
       "friendId": 6,
       "friendName": "Théo Lambert",
-      "friendAvatar": "/img/profiles/thug.jpg",
+      "friendAvatar": "./img/profiles/thug.jpg",
       "lastMessage": {
         "content": "Le projet avance bien ?",
         "timestamp": "2023-05-11T16:45:00Z"
