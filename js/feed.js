@@ -2,7 +2,7 @@
 export function initFeed() {
   loadPosts();
   setupPostCreation();
-  // setupPostInteractions();
+  setupPostInteractions();
 }
 
 // Variable globale pour stocker les posts actuels
@@ -43,6 +43,7 @@ function displayPosts(posts) {
 function createPostElement(post) {
   const postElement = document.createElement('div');
   postElement.className = 'post';
+  postElement.dataset.postId = post.id;
   
   // Formatage de la date et de l'heure
   const date = new Date(post.createdAt);
@@ -62,9 +63,18 @@ function createPostElement(post) {
       <p>${post.content}</p>
       ${post.image ? `<img src="${post.image}" alt="Post image" class="post-image">` : ''}
       <div class="post-stats">
-          <span>❤️ ${post.reactions.loves}</span>
-          <span>👍 ${post.reactions.likes}</span>
-          <span>👎 ${post.reactions.dislikes}</span>
+          <div class="reaction-btn-container">
+            <button class="reaction-btn love" data-reaction="love"><span class="reaction-icon">❤️</span></button>
+            <span class="reaction-count">${post.reactions.loves}</span>
+          </div>
+          <div class="reaction-btn-container">
+            <button class="reaction-btn like" data-reaction="like"><span class="reaction-icon">👍</span></button>
+            <span class="reaction-count">${post.reactions.likes}</span>
+          </div>
+          <div class="reaction-btn-container">
+            <button class="reaction-btn dislike" data-reaction="dislike"><span class="reaction-icon">👎</span></button>
+            <span class="reaction-count">${post.reactions.dislikes}</span>
+          </div>
       </div>
       <div class="post-comments">
           ${post.comments.map(comment => `
@@ -148,4 +158,70 @@ function addNewPost(newPost) {
 function displayError(message) {
   const container = document.getElementById('post-container');
   container.innerHTML = `<p class="error">${message}</p>`;
+}
+
+// Configure les interactions de post (réactions)
+function setupPostInteractions() {
+  const container = document.getElementById('post-container');
+  container.addEventListener('click', (e) => {
+    // Vérifie si le clic est sur un bouton de réaction ou son contenu
+    if (e.target.closest('.reaction-btn')) {
+      const button = e.target.closest('.reaction-btn');
+      const postId = button.closest('.post').dataset.postId;
+      const reaction = button.dataset.reaction;
+      handleReaction(postId, reaction);
+    }
+  });
+}
+
+// Gère la réaction à un post (incrémentation côté client)
+function handleReaction(postId, reaction) {
+  const postElement = document.querySelector(`.post[data-post-id="${postId}"]`);
+  if (postElement) {
+    const countElement = postElement.querySelector(`.reaction-btn.${reaction} + .reaction-count`);
+    if (countElement) {
+      // Incrémente le compteur de réactions
+      let count = parseInt(countElement.textContent) || 0;
+      count++;
+      countElement.textContent = count;
+      // Déclenche l'animation de particules
+      createParticleAnimation(reaction, postId);
+    }
+  }
+}
+
+// Crée une animation de particules pour la réaction
+function createParticleAnimation(reaction, postId) {
+  const colors = {
+    love: '#ff69b4',
+    like: '#1e90ff',
+    dislike: '#ff4500'
+  };
+
+  const button = document.querySelector(`.post[data-post-id="${postId}"] .reaction-btn.${reaction}`);
+  if (!button) return;
+
+  // Calcule la position de départ des particules
+  const rect = button.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+
+  // Crée et anime les particules
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.backgroundColor = colors[reaction];
+    particle.style.left = `${centerX}px`;
+    particle.style.top = `${centerY}px`;
+    // Définit des propriétés CSS personnalisées pour l'animation
+    particle.style.setProperty('--tx', `${(Math.random() - 0.5) * 100}px`);
+    particle.style.setProperty('--ty', `${(Math.random() - 0.5) * 100}px`);
+    particle.style.setProperty('--angle', `${Math.random() * 360}deg`);
+    document.body.appendChild(particle);
+
+    // Supprime la particule après l'animation
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+  }
 }

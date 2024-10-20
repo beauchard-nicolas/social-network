@@ -103,12 +103,11 @@
 .post img.post-image {
 	width: 100%;
 	border-radius: 4px;
-	margin: 10px 0;
 }
 
 /* Section des commentaires */
 .post-comments {
-	margin-top: 20px;
+	margin-top: 10px;
 	color: var(--muted);
 	border-radius: 5px;
 }
@@ -163,4 +162,58 @@
 /* Effet de survol sur le bouton de commentaire */
 .new-comment-form button:hover {
 	background-color: var(--primary-dark);
+}
+
+.post-stats {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.reaction-btn-container {
+	display: flex;
+	align-items: center;
+	margin-right: 15px;
+}
+
+.reaction-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.2em;
+	transition: transform 0.1s;
+	padding: 5px;
+}
+
+.reaction-btn:hover {
+	transform: scale(1.2);
+}
+
+.reaction-count {
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-left: 3px;
+	color: #555;
+}
+
+.particle {
+	position: fixed;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	pointer-events: none;
+	opacity: 0;
+	animation: particle-animation 1s ease-out forwards;
+}
+
+@keyframes particle-animation {
+	0% {
+		transform: translate(0, 0) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(var(--tx), var(--ty)) scale(0) rotate(var(--angle));
+		opacity: 0;
+	}
 }
