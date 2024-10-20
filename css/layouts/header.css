@@ -13,17 +13,20 @@ header {
 	right: 0;
 	z-index: 1000;
 	font-family: "Fira Code", monospace;
-	height: 5em;
+	height: 7em;
 }
 
 header h1 {
 	color: var(--foreground);
+	font-size: 2em;
 }
 
 header nav a {
 	color: var(--primary-foreground);
 	margin: 0 1rem;
 	text-decoration: none;
+	text-align: right;
+	align-self: flex-end;
 }
 
 header nav a:hover {

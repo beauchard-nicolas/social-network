@@ -48,7 +48,7 @@ body {
 
 #container {
 	flex: 1;
-	margin-top: 5em;
+	margin-top: 7em;
 	padding: 2em 0px;
 	background-color: var(--muted-foreground);
 	border-radius: 0.5em;
