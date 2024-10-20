@@ -70,14 +70,14 @@ function createPostElement(post) {
   // Construction du HTML pour le post
   postElement.innerHTML = `
       <div class="post-header">
-          <img src="${post.authorAvatar}" alt="${post.author}" class="author-avatar">
+          <img src="./${post.authorAvatar}" alt="${post.author}" class="author-avatar">
           <h2>${post.author}</h2>
           <div class="post-date">
               <span>${formattedDate}</span>
           </div>
       </div>
       <p>${post.content}</p>
-      ${post.image ? `<img src="${post.image}" alt="Post image" class="post-image" onclick="openImageModal('${post.image}', '${post.id}')">` : ''}
+      ${post.image ? `<img src="./${post.image}" alt="Post image" class="post-image" onclick="openImageModal('${post.image}', '${post.id}')">` : ''}
       <div class="post-stats">
           <div class="reaction-btn-container">
             <button class="reaction-btn love" data-reaction="love"><span class="reaction-icon">❤️</span></button>
