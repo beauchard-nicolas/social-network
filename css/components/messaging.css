@@ -9,6 +9,7 @@
 /* Style de la liste des conversations */
 #conversations-list {
 	width: 30%;
+	min-width: 170px;
 	border-right: 1px solid #ccc;
 	overflow-y: auto;
 }
