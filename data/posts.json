@@ -5,7 +5,7 @@
       "author": "Marie Dupont",
       "authorAvatar": "/img/profiles/cat.jpg",
       "content": "Journée incroyable à la plage ! Le soleil, le sable, et une vue à couper le souffle. #Vacances",
-      "image": "/img/posts/1.jpeg",
+      "image": "/img/posts/1.jpg",
       "createdAt": "2024-04-15T12:00:00Z",   
       "reactions": {
         "likes": 42,
@@ -69,8 +69,8 @@
       "id": 4,
       "author": "Marie Dupont",
       "authorAvatar": "/img/profiles/cat.jpg",
-      "content": "Nouvelle recette testée aujourd'hui : Risotto aux champignons. Un délice ! #Cooking",
-      "image": "/img/posts/3.jpeg",
+      "content": "Nouvelle recette testée aujourd'hui. Un délice ! #Cooking",
+      "image": "/img/posts/3.jpg",
       "createdAt": "2024-04-18T14:00:00Z",   
       "reactions": {
         "likes": 51,

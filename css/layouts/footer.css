@@ -12,10 +12,9 @@ footer {
 	bottom: 0;
 	z-index: 1000;
 	font-family: "Fira Code", monospace;
-
 	box-sizing: border-box;
 }
 
 footer p {
-	color: var(--muted-foreground);
+	color: var(--muted-light);
 }

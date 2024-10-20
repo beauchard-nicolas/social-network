@@ -39,16 +39,35 @@ function displayPosts(posts) {
   });
 }
 
+// Fonction pour formater la date
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffTime = Math.abs(now - date);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 1) {
+    return "Hier";
+  } else if (diffDays <= 7) {
+    return `Il y a ${diffDays} jours`;
+  } else {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${day}/${month}/${year} à ${hours}:${minutes}`;
+  }
+}
+
 // Crée un élément DOM pour un post individuel
 function createPostElement(post) {
   const postElement = document.createElement('div');
   postElement.className = 'post';
   postElement.dataset.postId = post.id;
   
-  // Formatage de la date et de l'heure
-  const date = new Date(post.createdAt);
-  const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
-  const formattedTime = `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
+  // Utilisation de la fonction formatDate
+  const formattedDate = formatDate(post.createdAt);
   
   // Construction du HTML pour le post
   postElement.innerHTML = `
@@ -56,12 +75,11 @@ function createPostElement(post) {
           <img src="${post.authorAvatar}" alt="${post.author}" class="author-avatar">
           <h2>${post.author}</h2>
           <div class="post-date">
-              <span class="date">${formattedDate}</span>
-              <span class="time">${formattedTime}</span>
+              <span>${formattedDate}</span>
           </div>
       </div>
       <p>${post.content}</p>
-      ${post.image ? `<img src="${post.image}" alt="Post image" class="post-image">` : ''}
+      ${post.image ? `<img src="${post.image}" alt="Post image" class="post-image" onclick="openImageModal('${post.image}', '${post.id}')">` : ''}
       <div class="post-stats">
           <div class="reaction-btn-container">
             <button class="reaction-btn love" data-reaction="love"><span class="reaction-icon">❤️</span></button>
@@ -80,7 +98,7 @@ function createPostElement(post) {
           ${post.comments.map(comment => `
               <div class="comment">
                   <strong>${comment.author}:</strong> ${comment.content}
-                  <span class="comment-date">${new Date(comment.createdAt).toLocaleString()}</span>
+                  <span class="comment-date">${formatDate(comment.createdAt)}</span>
               </div>
           `).join('')}
       </div>
@@ -160,11 +178,10 @@ function displayError(message) {
   container.innerHTML = `<p class="error">${message}</p>`;
 }
 
-// Configure les interactions de post (réactions)
+// Configure les interactions de post
 function setupPostInteractions() {
   const container = document.getElementById('post-container');
   container.addEventListener('click', (e) => {
-    // Vérifie si le clic est sur un bouton de réaction ou son contenu
     if (e.target.closest('.reaction-btn')) {
       const button = e.target.closest('.reaction-btn');
       const postId = button.closest('.post').dataset.postId;
@@ -225,3 +242,41 @@ function createParticleAnimation(reaction, postId) {
     }, 1000);
   }
 }
+
+// Fonction pour ouvrir l'image en grand dans une modal avec les informations du post
+function openImageModal(imageSrc, postId) {
+  const post = currentPosts.find(p => p.id === parseInt(postId));
+  if (!post) return;
+
+  const formattedDate = formatDate(post.createdAt);
+
+  const modal = document.createElement('div');
+  modal.className = 'image-modal';
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img src="${imageSrc}" alt="Image en grand">
+      <div class="modal-post-info">
+        <div class="modal-post-header">
+          <img src="${post.authorAvatar}" alt="${post.author}" class="author-avatar">
+          <div class="modal-post-header-text">
+            <h2>${post.author}</h2>
+            <div class="modal-post-date">${formattedDate}</div>
+          </div>
+        </div>
+        <p>${post.content}</p>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Fermer la modal en cliquant sur le bouton de fermeture ou en dehors de l'image
+  modal.addEventListener('click', (e) => {
+    if (e.target.className === 'image-modal' || e.target.className === 'close-modal') {
+      document.body.removeChild(modal);
+    }
+  });
+}
+
+// Rendre la fonction openImageModal globale pour qu'elle soit accessible depuis l'attribut onclick
+window.openImageModal = openImageModal;

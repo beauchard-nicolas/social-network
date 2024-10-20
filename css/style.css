@@ -6,6 +6,7 @@
 	--background: hsl(240, 3.7%, 15.88%);
 	--foreground: hsl(229, 23%, 99%);
 	--muted: hsl(240, 5.88%, 10%);
+	--muted-light: hsl(0, 0%, 36%);
 	--muted-foreground: hsl(0, 0%, 97%);
 	--popover: hsl(240, 5.88%, 10%);
 	--popover-foreground: hsl(0, 0%, 100%);
