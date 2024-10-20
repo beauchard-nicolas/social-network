@@ -7,9 +7,9 @@ import { initFriends } from './friends.js';
 
 // Configuration des routes de l'application
 const routes = {
-  feed: { init: initFeed, template: '/templates/feed.html' },
-  messaging: { init: initMessaging, template: '/templates/messaging.html' },
-  friends: { init: initFriends, template: '/templates/friends.html' }
+  feed: { init: initFeed, template: './templates/feed.html' },
+  messaging: { init: initMessaging, template: './templates/messaging.html' },
+  friends: { init: initFriends, template: './templates/friends.html' }
 };
 
 let currentPage = 'feed';
