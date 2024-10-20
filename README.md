@@ -4,7 +4,7 @@
 Ce projet a pour but de réaliser un mini-réseau social en local, sans connexions vers une API externe. L'objectif est d'évaluer les compétences en développement web et en organisation de projet des demandeurs.
 
 ## Lien du site
-[Visitez le Mini-Réseau Social](https://social-network.nicolas-beauchard.fr)
+[Visitez social network.](https://social-network.nicolas-beauchard.fr)
 
 ## Technologies Utilisées
 - **HTML** : Pour la structure des pages.
