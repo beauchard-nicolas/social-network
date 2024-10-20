@@ -59,3 +59,26 @@
 .message-btn:hover {
 	background-color: var(--primary-dark);
 }
+
+/* Ajoutez ces styles à la fin du fichier existant */
+
+.friends-filter-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+#friends-filter {
+	flex-grow: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+#friends-sort {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: white;
+}
